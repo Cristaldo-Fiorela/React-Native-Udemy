@@ -22,7 +22,7 @@ El principal objetivo de este repositorio es aprender y trabajar con React Nativ
 
 ## Instrucciones de Ejecución
 
-1. Clona el repositorio: `git clone https://github.com/tu-usuario/react-native-projects.git`
+1. Clona el repositorio: `git clone https://github.com/Cristaldo-Fiorela/React-Native-Udemy.git`
 2. Instala las dependencias: `npm install` o `yarn install`
 3. Ejecuta el proyecto: `npm start` o `yarn start`
 
