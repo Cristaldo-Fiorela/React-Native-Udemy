@@ -69,8 +69,13 @@ const Login = () => {
                 nombre: 'Fiorela',
                 username: 'Strider'
             }
-        })
+        });
     }
+
+    const logout = () => {
+        dispatch({ type: 'logout' });
+    }
+
 
     if( validando) {
         return (
@@ -98,6 +103,7 @@ const Login = () => {
                 ? (
                     <button
                         className="btn btn-danger"
+                        onClick={ logout }
                     >
                         Logout
                     </button>
