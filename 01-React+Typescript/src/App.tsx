@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Funciones from "./typescript/Funciones";
 import ObjetosLiterales from "./typescript/ObjetosLiterales"
 import TiposBasicos from "./typescript/TiposBasicos";
+import Usuarios from "./components/Usuarios";
 
 
 const App = () => {
@@ -16,7 +17,8 @@ const App = () => {
       {/* <Funciones /> */}
       {/* <Contador /> */}
       {/* <ContadorConHook /> */}
-      <Login />
+      {/* <Login /> */}
+      <Usuarios />
     </div>
   )
 }
