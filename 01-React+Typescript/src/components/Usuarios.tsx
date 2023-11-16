@@ -46,6 +46,14 @@ const Usuarios = () => {
 
             <button
                 className='btn btn-primary'
+            >
+                Anterior
+            </button>
+
+            &nbsp;
+
+            <button
+                className='btn btn-primary'
                 onClick={ cargarUsuarios }
             >
                 Siguiente
