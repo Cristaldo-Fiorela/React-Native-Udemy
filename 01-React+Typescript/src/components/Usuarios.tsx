@@ -1,38 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import { reqResApi } from '../api/reqRes';
-import { ReqResListado, Usuario } from '../interfaces/reqRes';
+import { Usuario } from '../interfaces/reqRes';
+import useUsuarios from "../hooks/useUsuarios";
 
 const Usuarios = () => {
 
-    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
-    const paginaRef = useRef(1);
-
-    useEffect(() => {
-        return () => {
-            cargarUsuarios();
-        }
-    }, [])
-
-
-
-    const cargarUsuarios = async() => {
-
-        const resp = await reqResApi.get<ReqResListado>('/users', {
-            params: {
-                page: paginaRef.current
-            }
-        });
-
-        console.log(resp)
-
-        if(resp.data.data.length > 0) {
-            setUsuarios( resp.data.data);
-            paginaRef.current ++;
-        } else {
-            alert('No hay mas registros');
-        }
-    }
-
+    const { usuarios, cargarUsuarios} = useUsuarios();
 
     const renderItem = (usuario: Usuario) => {
         const {id, first_name, last_name, email, avatar} = usuario;
