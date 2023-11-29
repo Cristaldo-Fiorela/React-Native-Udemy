@@ -12,11 +12,10 @@ const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
     return (
         <TouchableOpacity
             onPress={ onPress }
-            style={ 
-                (position === 'bottomL')
-                    ? styles.floatBtnLocationL
-                    : styles.floatBtnLocationR
-            }
+            style={[ 
+                styles.floatBtnLocation,
+                (position === 'bottomL') ? styles.left : styles.right
+            ]}
         >
             <View style={ styles.floatBtn } >
                 <Text style={ styles.floatBtnText }>{title}</Text>
@@ -28,27 +27,36 @@ const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
 export default FloatBtn;
 
 const styles = StyleSheet.create({
-    floatBtnLocationR: {
-        bottom: 25,
-        position: 'absolute',
-        right: 25
-    },
-    floatBtnLocationL: {
-        bottom: 25,
-        position: 'absolute',
-        left: 25
-    },
     floatBtn: {
         backgroundColor: '#5856D6',
         borderRadius: 100,
         height: 60,
         width: 60,
         justifyContent: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+
+        elevation: 8,
     },
     floatBtnText: {
         alignSelf: 'center',
         color: 'white',
         fontSize: 25,
         fontWeight: 'bold',
-    }
+    },
+    floatBtnLocation: {
+        bottom: 25,
+        position: 'absolute',
+    },
+    right: {
+        right: 25
+    },
+    left: {
+        left: 25
+    },
 });
