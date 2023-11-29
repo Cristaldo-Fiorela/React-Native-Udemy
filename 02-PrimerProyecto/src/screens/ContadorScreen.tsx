@@ -18,11 +18,6 @@ const ContadorScreen = () => {
                 onPress={() => setContador(contador + 1)}
             />
 
-            <FloatBtn 
-                title="-1"
-                onPress={() => setContador(contador - 1)}
-            />
-
 
             {/* <TouchableOpacity
                 onPress={() => setContador(contador - 1)}
