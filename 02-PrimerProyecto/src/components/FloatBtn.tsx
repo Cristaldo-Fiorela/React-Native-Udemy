@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
 
 interface Props {
     position: 'bottomR' | 'bottomL';
@@ -10,17 +10,21 @@ interface Props {
 const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
 
     return (
-        <TouchableOpacity
-            onPress={ onPress }
+        <View
             style={[ 
                 styles.floatBtnLocation,
                 (position === 'bottomL') ? styles.left : styles.right
             ]}
         >
-            <View style={ styles.floatBtn } >
-                <Text style={ styles.floatBtnText }>{title}</Text>
-            </View>
-        </TouchableOpacity>
+            <TouchableNativeFeedback
+                onPress={ onPress }
+                background={TouchableNativeFeedback.Ripple('#28425B', false, 30)}
+            >
+                <View style={ styles.floatBtn } >
+                    <Text style={ styles.floatBtnText }>{title}</Text>
+                </View>
+        </TouchableNativeFeedback>
+        </View>
     )
 }
 
