@@ -7,10 +7,7 @@ const ContadorScreen = () => {
     const [contador, setContador] = useState(10);
 
     return (
-        <View style={{
-            flex: 1,
-            justifyContent: 'center',
-        }}>
+        <View style={ styles.container}>
             <Text style={{
                 textAlign: 'center',
                 fontSize: 40,
@@ -33,3 +30,10 @@ const ContadorScreen = () => {
 }
 
 export default ContadorScreen
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+    }
+})
