@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Button, TouchableOpacity } from 'react-native'
+import { Text, View, Button, TouchableOpacity, StyleSheet } from 'react-native'
 import { useState } from 'react';
 
 const ContadorScreen = () => {
