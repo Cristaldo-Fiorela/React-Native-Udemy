@@ -2,16 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface Props {
+    position: 'bottomR' | 'bottomL';
     title: String;
     onPress: () =>  void;
 }
 
-const FloatBtn = ({title, onPress}: Props) => {
+const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
 
     return (
         <TouchableOpacity
             onPress={ onPress }
-            style={ styles.floatBtnLocationR }
+            style={ 
+                (position === 'bottomL')
+                    ? styles.floatBtnLocationL
+                    : styles.floatBtnLocationR
+            }
         >
             <View style={ styles.floatBtn } >
                 <Text style={ styles.floatBtnText }>{title}</Text>

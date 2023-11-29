@@ -13,11 +13,17 @@ const ContadorScreen = () => {
                 Contador: {contador}
             </Text>
 
-            <FloatBtn 
+            <FloatBtn
+                position='bottomR'
                 title="+1"
                 onPress={() => setContador(contador + 1)}
             />
 
+            <FloatBtn 
+                position='bottomL'
+                title="-1"
+                onPress={() => setContador(contador - 1)}
+            />
 
             {/* <TouchableOpacity
                 onPress={() => setContador(contador - 1)}
