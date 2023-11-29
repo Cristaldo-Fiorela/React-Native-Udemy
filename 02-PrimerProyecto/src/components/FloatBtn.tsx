@@ -1,18 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const FloatBtn = () => {
+interface Props {
+    title: String;
+    onPress: () =>  void;
+}
+
+const FloatBtn = ({title, onPress}: Props) => {
+
     return (
-        <>
-            <TouchableOpacity
-                onPress={ () =>console.log('CLICK')}
-                style={ styles.floatBtnLocationR }
-            >
-                <View style={ styles.floatBtn } >
-                    <Text style={ styles.floatBtnText }>+1</Text>
-                </View>
-            </TouchableOpacity>
-        </>
+        <TouchableOpacity
+            onPress={ onPress }
+            style={ styles.floatBtnLocationR }
+        >
+            <View style={ styles.floatBtn } >
+                <Text style={ styles.floatBtnText }>{title}</Text>
+            </View>
+        </TouchableOpacity>
     )
 }
 

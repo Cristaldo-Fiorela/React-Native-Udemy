@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View, Button, TouchableOpacity, StyleSheet } from 'react-native'
 import { useState } from 'react';
+import FloatBtn from '../components/FloatBtn';
 
 const ContadorScreen = () => {
 
@@ -11,6 +12,17 @@ const ContadorScreen = () => {
             <Text style={ styles.title }>
                 Contador: {contador}
             </Text>
+
+            <FloatBtn 
+                title="+1"
+                onPress={() => setContador(contador + 1)}
+            />
+
+            <FloatBtn 
+                title="-1"
+                onPress={() => setContador(contador - 1)}
+            />
+
 
             {/* <TouchableOpacity
                 onPress={() => setContador(contador - 1)}
