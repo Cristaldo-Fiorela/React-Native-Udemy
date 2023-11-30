@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableNativeFeedback, TouchableOpacity, View, Platform } from 'react-native';
 
 interface Props {
     position: 'bottomR' | 'bottomL';
@@ -9,23 +9,39 @@ interface Props {
 
 const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
 
-    return (
-        <View
-            style={[ 
-                styles.floatBtnLocation,
-                (position === 'bottomL') ? styles.left : styles.right
-            ]}
-        >
-            <TouchableNativeFeedback
+    const ios = () => {
+        return (
+            <TouchableOpacity
                 onPress={ onPress }
-                background={TouchableNativeFeedback.Ripple('#28425B', false, 30)}
             >
                 <View style={ styles.floatBtn } >
                     <Text style={ styles.floatBtnText }>{title}</Text>
                 </View>
-        </TouchableNativeFeedback>
-        </View>
-    )
+            </TouchableOpacity>
+        )
+    };
+
+    const antroid = () => {
+        return (
+            <View
+                style={[ 
+                    styles.floatBtnLocation,
+                    (position === 'bottomL') ? styles.left : styles.right
+                ]}
+            >
+                <TouchableNativeFeedback
+                    onPress={ onPress }
+                    background={TouchableNativeFeedback.Ripple('#28425B', false, 30)}
+                >
+                    <View style={ styles.floatBtn } >
+                        <Text style={ styles.floatBtnText }>{title}</Text>
+                    </View>
+                </TouchableNativeFeedback>
+            </View>
+        )
+    };
+
+    return (Platform.OS === 'ios') ? ios() : antroid();
 }
 
 export default FloatBtn;
