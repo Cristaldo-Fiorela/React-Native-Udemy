@@ -12,6 +12,7 @@ const FloatBtn = ({title, onPress, position = 'bottomR'}: Props) => {
     const ios = () => {
         return (
             <TouchableOpacity
+                activeOpacity={ 0.8 }
                 onPress={ onPress }
             >
                 <View style={ styles.floatBtn } >
