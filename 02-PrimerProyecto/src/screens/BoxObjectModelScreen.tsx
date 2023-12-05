@@ -5,6 +5,7 @@ const BoxObjectModelScreen = () => {
     return (
         <View style={ styles.containter }>
             <Text style={ styles.title }>Box Object Model</Text>
+            <Text style={ styles.title }>Box Object Model</Text>
         </View>
     )
 }
@@ -24,5 +25,6 @@ const styles = StyleSheet.create({
         borderWidth: 10,
         // backgroundColor: 'red',
         marginRight: 50,
+        marginVertical: 100, 
     }
 })
