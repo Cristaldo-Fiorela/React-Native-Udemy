@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         // right:50
         position: 'absolute',
         top: 0,
-        right: 0
+        right: 0,
     },
     cajaNaranja: {
         width: 100,
@@ -53,10 +53,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
         borderWidth: 10,
         borderColor: 'white',
-        // top: -50,
-        // left: 50
-        position: 'absolute',
-        bottom: 0,
-        left: 0
+        ...StyleSheet.absoluteFillObject //? = position absolute + top 0 + bottom 0 + left 0 + right 0
     },
 });
