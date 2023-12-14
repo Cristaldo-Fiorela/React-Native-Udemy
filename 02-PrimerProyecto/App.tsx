@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native';
 // import DimensionesScreen from './src/screens/DimensionesScreen';
 import PositionScreen from './src/screens/PositionScreen';
 import FlexboxScreen from './src/screens/FlexboxScreen';
+import TareaScreen from './src/screens/TareaScreen';
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       {/* <BoxObjectModelScreen /> */}
       {/* <DimensionesScreen /> */}
       {/* <PositionScreen /> */}
-      <FlexboxScreen />
+      {/* <FlexboxScreen /> */}
+      <TareaScreen />
     </SafeAreaView>
   )
 }
