@@ -17,23 +17,28 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#28C4D9',
         flex: 1,
+        flexDirection: 'row',
+        // justifyContent: 'flex-end',
+        // justifyContent: 'center',
+        // justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
     },
     caja1: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
-        flex: 3, // 3 + 2 + 1 = 6 <= DE ESTE TOTAL TOMO 3 UNIDADES o 1/3
+        // flex: 3, // 3 + 2 + 1 = 6 <= DE ESTE TOTAL TOMO 3 UNIDADES o 1/3
     },
     caja2: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
-        flex: 3,
+        // flex: 3,
     },
     caja3: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
-        flex: 1,
+        // flex: 1,
     },
 });
