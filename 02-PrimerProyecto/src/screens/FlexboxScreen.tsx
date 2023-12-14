@@ -7,6 +7,34 @@ const FlexboxScreen = () => {
         <Text style={ styles.caja1 }>Caja 1</Text>
         <Text style={ styles.caja2 }>Caja 2</Text>
         <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
+        <Text style={ styles.caja3 }>Caja 3</Text>
     </View>
     )
 }
@@ -29,13 +57,15 @@ const styles = StyleSheet.create({
         // flexDirection: 'row',
         // justifyContent: 'flex-end',
         // alignItems: 'flex-end',
+        alignItems: 'flex-start',
+        flexWrap: 'wrap'
     },
     caja1: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
         // flex: 3, // 3 + 2 + 1 = 6 <= DE ESTE TOTAL TOMO 3 UNIDADES o 1/3
-        alignSelf: 'center', //? sirve para tener un comportamiento diferente al del padre.
+        // alignSelf: 'center', //? sirve para tener un comportamiento diferente al del padre.
 
     },
     caja2: {
@@ -43,13 +73,13 @@ const styles = StyleSheet.create({
         borderColor: 'white',
         fontSize: 30,
         // flex: 3,
-        alignSelf: 'flex-start',
+        // alignSelf: 'flex-start',
     },
     caja3: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
         // flex: 1,
-        alignSelf: 'flex-end',
+        // alignSelf: 'flex-end',
     },
 });
