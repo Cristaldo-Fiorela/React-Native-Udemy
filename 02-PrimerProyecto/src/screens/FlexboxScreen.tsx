@@ -19,9 +19,12 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         // justifyContent: 'flex-end',
-        // justifyContent: 'center',
+        justifyContent: 'center',
         // justifyContent: 'space-around',
-        justifyContent: 'space-evenly',
+        // justifyContent: 'space-evenly',
+        // alignItems: 'flex-start', //? sus hijos solo tienen el espacio minimo necesario para renderizar el contenido
+        // alignItems: 'flex-end',
+        alignItems: 'center',
     },
     caja1: {
         borderWidth: 2,
