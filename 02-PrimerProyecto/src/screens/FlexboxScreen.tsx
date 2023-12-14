@@ -22,15 +22,18 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
+        flex: 3, // 3 + 2 + 1 = 6 <= DE ESTE TOTAL TOMO 3 UNIDADES o 1/3
     },
     caja2: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
+        flex: 3,
     },
     caja3: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
+        flex: 1,
     },
 });
