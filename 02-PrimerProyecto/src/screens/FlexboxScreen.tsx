@@ -25,26 +25,31 @@ const styles = StyleSheet.create({
         // alignItems: 'flex-start', //? sus hijos solo tienen el espacio minimo necesario para renderizar el contenido
         // alignItems: 'flex-end',
         // alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        //* EJERCICIO 1
+        // flexDirection: 'row',
+        // justifyContent: 'flex-end',
+        // alignItems: 'flex-end',
     },
     caja1: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
         // flex: 3, // 3 + 2 + 1 = 6 <= DE ESTE TOTAL TOMO 3 UNIDADES o 1/3
+        alignSelf: 'center', //? sirve para tener un comportamiento diferente al del padre.
+
     },
     caja2: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
         // flex: 3,
+        alignSelf: 'flex-start',
     },
     caja3: {
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
         // flex: 1,
+        alignSelf: 'flex-end',
     },
 });
