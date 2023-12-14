@@ -17,14 +17,17 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#28C4D9',
         flex: 1,
-        flexDirection: 'row',
+        // flexDirection: 'row',
         // justifyContent: 'flex-end',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         // justifyContent: 'space-around',
         // justifyContent: 'space-evenly',
         // alignItems: 'flex-start', //? sus hijos solo tienen el espacio minimo necesario para renderizar el contenido
         // alignItems: 'flex-end',
-        alignItems: 'center',
+        // alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
     },
     caja1: {
         borderWidth: 2,
