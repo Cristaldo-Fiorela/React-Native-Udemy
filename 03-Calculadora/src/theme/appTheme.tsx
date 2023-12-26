@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     botonTexto: {
         color: 'white',
         fontSize: 30,
-        fontWeight: 'bold',
+        fontWeight: '400',
         padding: 10,
         textAlign: 'center',
     },

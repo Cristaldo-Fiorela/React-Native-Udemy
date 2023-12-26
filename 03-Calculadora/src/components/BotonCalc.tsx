@@ -16,7 +16,10 @@ const BotonCalc = ({ texto, color = '#2D2D2D' }: Props) => {
             }}
         >
 
-            <Text style={ styles.botonTexto }>{ texto }</Text>
+            <Text style={{ 
+                ...styles.botonTexto,
+                color: ( color === '#9B9B9B') ? 'black' : 'white'
+            }}>{ texto }</Text>
         </View>
     )
 }
