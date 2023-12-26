@@ -6,7 +6,7 @@ El principal objetivo de este repositorio es aprender y trabajar con React Nativ
 
 ## Proyectos
 
-1. **Proximamente:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper et sapien non suscipit. Aliquam.
+1. **Calculadora:** Creacion de calculadora imitando el estilo de IOS.
 
 
 2. **Proximamente:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ullamcorper et sapien non suscipit. Aliquam.
