@@ -48,7 +48,7 @@ const CalculadoraScreen = () => {
             {/* FILA DE BOTONES 4 */}
             <View style={ styles.fila }>
                 {/* Boton */}
-                <BotonCalc texto='0'/>
+                <BotonCalc texto='0' ancho/>
                 <BotonCalc texto='.'/>
                 <BotonCalc texto='=' color="#FF9427"/>
             </View>

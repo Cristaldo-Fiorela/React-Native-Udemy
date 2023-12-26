@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     calculadoraContainer: {
         flex: 1,
         justifyContent: 'flex-end',
-        paddingHorizontal: 10,
+        paddingHorizontal: 20,
     },
     resultado: {
         color: 'white',
