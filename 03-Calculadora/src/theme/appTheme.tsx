@@ -27,14 +27,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     boton: {
-        backgroundColor: '#9B9B9B',
+        backgroundColor: '#2D2D2D',
         borderRadius: 100,
         height: 80,
+        marginHorizontal: 10,
         justifyContent: 'center',
         width: 80,
     },
     botonTexto: {
-        color: 'black',
+        color: 'white',
         fontSize: 30,
         fontWeight: 'bold',
         padding: 10,
