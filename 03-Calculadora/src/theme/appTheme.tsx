@@ -20,6 +20,12 @@ const styles = StyleSheet.create({
         fontSize: 30, 
         textAlign: 'right',
     },
+    fila: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: 18,
+        paddingHorizontal: 10,
+    },
     boton: {
         backgroundColor: '#9B9B9B',
         borderRadius: 100,
@@ -33,7 +39,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 10,
         textAlign: 'center',
-    }
+    },
+
 });
 
 export default styles;
