@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     resultado: {
         color: 'white',
         fontSize: 60, 
+        marginBottom: 10,
         textAlign: 'right',
     },
     resultadoPequeno: {
