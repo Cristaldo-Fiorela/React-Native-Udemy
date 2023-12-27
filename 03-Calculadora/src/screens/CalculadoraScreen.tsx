@@ -16,6 +16,14 @@ const CalculadoraScreen = () => {
         setNumero( numero + numeroTexto );
     };
 
+    const positivoNegativo = () => {
+        if (numero.includes('-')) {
+            setNumero( numero.replace('-', ''));
+        } else {
+            setNumero( '-' + numero );
+        }
+    };
+
     return (
         <View style={ styles.calculadoraContainer }>
             <Text style={ styles.resultadoPequeno }>{ numeroAnterior }</Text>
@@ -29,9 +37,9 @@ const CalculadoraScreen = () => {
             <View style={ styles.fila }>
                 {/* Boton */}
                 <BotonCalc texto='C' color="#9B9B9B" accion={ limpiar } />
-                <BotonCalc texto='+/-' color="#9B9B9B" accion={ limpiar }/>
+                <BotonCalc texto='+/-' color="#9B9B9B" accion={ positivoNegativo }/>
                 <BotonCalc texto='del' color="#9B9B9B" accion={ limpiar }/>
-                <BotonCalc texto='/' color="#FF9427" accion={ limpiar }/>
+                <BotonCalc texto='%' color="#FF9427" accion={ limpiar }/>
             </View>
 
             {/* FILA DE BOTONES 1 */}
