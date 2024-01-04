@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import styles from '../theme/appTheme';
 import BotonCalc from '../components/BotonCalc';
-
 const CalculadoraScreen = () => {
 
     const [numero, setNumero] = useState('0');
     const [numeroAnterior, setNumeroAnterior] = useState('0');
 
     const limpiar = () => {
-        setNumero('0')
+        setNumero('0');
     };
 
     const armarNumero = ( numeroTexto: string ) => {
@@ -53,6 +52,30 @@ const CalculadoraScreen = () => {
         }
     };
 
+    const btnDel = () => {
+        /*
+        1. Tomar la variable contenedora del numero actual
+        2. con slice indicar en el 1er parametro la posicion basada la extraccion y 2do el indice en el que termina la extraccion
+
+        A TENER EN CUENTA:
+        no debe quedar un - solo cuando el num es negativo.
+        una vez llegado a el final debe "limpiar" y volver a 0
+        */
+        // if ( numero.includes('-')) {
+        //     setNumero( numero.slice(0, -1));
+        // }
+
+        console.log(numero.length)
+        setNumero( numero.slice(0, -1));
+        
+        if(numero.length === 1 ) {
+            limpiar();
+        }
+        if(numero.length === 2 && numero.includes('-')) {
+            limpiar();
+        }
+    };
+
     return (
         <View style={ styles.calculadoraContainer }>
             <Text style={ styles.resultadoPequeno }>{ numeroAnterior }</Text>
@@ -67,7 +90,7 @@ const CalculadoraScreen = () => {
                 {/* Boton */}
                 <BotonCalc texto='C' color="#9B9B9B" accion={ limpiar } />
                 <BotonCalc texto='+/-' color="#9B9B9B" accion={ positivoNegativo }/>
-                <BotonCalc texto='del' color="#9B9B9B" accion={ limpiar }/>
+                <BotonCalc texto='del' color="#9B9B9B" accion={ btnDel }/>
                 <BotonCalc texto='%' color="#FF9427" accion={ limpiar }/>
             </View>
 
