@@ -53,26 +53,30 @@ const CalculadoraScreen = () => {
     };
 
     const btnDel = () => {
-        /*
-        1. Tomar la variable contenedora del numero actual
-        2. con slice indicar en el 1er parametro la posicion basada la extraccion y 2do el indice en el que termina la extraccion
 
-        A TENER EN CUENTA:
-        no debe quedar un - solo cuando el num es negativo.
-        una vez llegado a el final debe "limpiar" y volver a 0
-        */
-        // if ( numero.includes('-')) {
-        //     setNumero( numero.slice(0, -1));
+        // // * Mi resolucion a la tarea.
+        // setNumero( numero.slice(0, -1));
+        
+        // if(numero.length === 1 ) {
+        //     limpiar();
+        // }
+        // if(numero.length === 2 && numero.includes('-')) {
+        //     limpiar();
         // }
 
-        console.log(numero.length)
-        setNumero( numero.slice(0, -1));
-        
-        if(numero.length === 1 ) {
-            limpiar();
+        // * Resolucion del profe
+        let negativo = '';
+        let numeroTemporal = numero;
+
+        if (numero.includes('-')) {
+            negativo = '-';
+            numeroTemporal = numero.substring(1);
         }
-        if(numero.length === 2 && numero.includes('-')) {
-            limpiar();
+
+        if(numeroTemporal.length > 1) {
+            setNumero(negativo + numeroTemporal.slice(0, -1));
+        } else {
+            setNumero('0');
         }
     };
 
